@@ -1,0 +1,49 @@
+#:kivy 2.1.0
+
+<Start>
+    Label:
+        font_size: '40sp'
+        center_x: root.width / 2
+        center_y: root.height / 1.15
+        text: "Tamagotchi"
+
+    Button: 
+        text: 'New Game'
+        id: 'new_game'
+        center_x: root.width /2
+        center_y: root.height / 1.45
+        font_size: '20sp'
+        on_press: root.new_game()
+
+    Button: 
+        text: 'Load Game'
+        id: 'load_game'
+        center_x: root.width /2
+        center_y: root.height / 2
+        font_size: '20sp'
+        on_press: root.load_game()
+
+    Button: 
+        text: 'Options'
+        id: 'options'
+        center_x: root.width /2
+        center_y: root.height / 3.5
+        font_size: '20sp'
+        on_press: root.options()
+
+
+
+<NewGame>
+    
+    BoxLayout
+        orientation: 'vertical'
+        spacing: '10dp'
+        
+        Label: 
+            font_size: '20sp'
+            text: "What is your Name?"
+
+
+        TextInput:
+            text: "enter name here"
+            multiline: "false"
