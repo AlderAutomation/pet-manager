@@ -1,41 +1,62 @@
-#:kivy 2.1.0
-
 <Start>
-    Label:
-        font_size: '40sp'
-        center_x: root.width / 2
-        center_y: root.height / 1.15
-        text: "Tamagotchi"
+    BoxLayout:
+        orientation: 'vertical'  
+        padding: '10dp'
+        spacing: '15dp'
 
-    Button: 
-        text: 'New Game'
-        id: 'new_game'
-        center_x: root.width /2
-        center_y: root.height / 1.45
-        font_size: '20sp'
-        on_press: root.new_game()
 
-    Button: 
-        text: 'Load Game'
-        id: 'load_game'
-        center_x: root.width /2
-        center_y: root.height / 2
-        font_size: '20sp'
-        on_press: root.load_game()
+        Label:
+            font_size: '40sp'
+            text: "Tamagotchi"
 
-    Button: 
-        text: 'Options'
-        id: 'options'
-        center_x: root.width /2
-        center_y: root.height / 3.5
-        font_size: '20sp'
-        on_press: root.options()
+        Button: 
+            text: 'New Game'
+            id: 'new_game'
+            font_size: '20sp'
+            size_hint_y: None 
+            height: self.texture_size[1] + dp(30)
+            size_hint_x: None
+            width: self.texture_size[0] + dp(100)
+            pos_hint: {"center_x":0.5}
+            on_press: root.new_game()
+
+        Button: 
+            text: 'Load Game'
+            id: 'load_game'
+            font_size: '20sp'
+            size_hint_y: None 
+            height: self.texture_size[1] + dp(30)
+            size_hint_x: None
+            width: self.texture_size[0] + dp(100)
+            pos_hint: {"center_x":0.5}
+            on_press: root.load_game()
+
+        Button: 
+            text: 'Options'
+            id: 'options'
+            font_size: '20sp'
+            size_hint_y: None 
+            height: self.texture_size[1] + dp(30)
+            size_hint_x: None
+            width: self.texture_size[0] + dp(100)
+            pos_hint: {"center_x":0.5}
+            on_press: root.options()
+
+        Button: 
+            text: 'Exit'
+            font_size: '20sp'
+            size_hint_y: None 
+            height: self.texture_size[1] + dp(30)
+            size_hint_x: None
+            width: self.texture_size[0] + dp(100)
+            pos_hint: {"center_x":0.5}
+            on_press: quit()
 
 
 
 <NewGame>
     
-    BoxLayout
+    BoxLayout:
         orientation: 'vertical'
         spacing: '10dp'
         
