@@ -1,3 +1,4 @@
+import os
 import kivy
 from kivy.app import App
 from kivy.uix.widget import Widget
@@ -7,7 +8,8 @@ from kivy.config import Config
 
 kivy.require("1.9.1")
 
-Config.set('kivy', 'log_dir', '/home/picard/tamagotchi/logs/')
+cwd = os.getcwd()
+Config.set('kivy', 'log_dir', cwd + '/logs/')
 Config.set('kivy', 'log_level', 'debug')
 Config.write()
 
